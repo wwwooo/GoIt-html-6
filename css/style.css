@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 908px;
+}
+
+header {
+  margin-top: 10px;
+  //text-align: center;
+}
+
+header adress {
+  display: inline-block;
+  color: #777;
+  vertical-align: middle;
+}
+
+header adress:before {
+  content: '';
+  display: inline-block;
+  margin-top: -1px;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background: #175272 url('../img/sprites.png') -78px 0px no-repeat;
+  border-radius: 50%;
+}
+
+header form {
+  display: inline-block;
+  margin: 0 15px;
+  width: 496px;
+  height: 27px;
+  border-radius: 3px;
+  background: linear-gradient(to top, #0d3458, #1f6787);
+  box-shadow: 0px 3px 3px 0px rgba(150, 150, 150, 0.75);
+  color: #fff;
+  font-size: 12px;
+}
+
+header form:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background: #175272 url('../img/sprites.png') -50px 0px no-repeat;
+}
+
+header form .text {
+  margin: 3px 0;
+  width: 112px;
+  padding-left: 5px;
+}
+
+header form .login-button {
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
+
+header form a {
+  margin: 0 0 0 5px;
+  color:#bfbfbf;
+}
+
+header nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .navig {
+  width: 80px;
+  height: 25px;
+  list-style: none;
+  border: 1px solid rgb(189, 196, 199);
+  border-radius: 30%;
+  text-align: center;
+}
+
+header .navig li {
+  display: inline-block;
+  padding: 0 2px;
+}
+
+header .banner img {
+  display: block;
+  margin: 5px 0;
+}
+
+.global-menu-wrap {
+  display: block;
+  background: linear-gradient(to top, #000, #4d5663);
+}
+
+.global-menu {
+  padding-left: 50px;
+  height: 35px;
+  list-style: none;
+}
+
+.global-menu li {
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 2px 10px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+.global-menu li:hover {
+  background: linear-gradient(to top, #0d3458, #1f6787);
+}
+
+.global-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+main form {
+  display: inline-block;
+  margin: 20px 0;
+  width: 200px;
+  height: 135px;
+  background: #999;
+}
