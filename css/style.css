@@ -1,10 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
 }
 
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
 }
 
 .wrap {
@@ -13,53 +20,66 @@ body {
 }
 
 header {
-  margin-top: 10px;
-  //text-align: center;
+  margin-top: 15px;
 }
 
 header adress {
+  position: relative;
   display: inline-block;
+  margin: 3px 0 0 30px;
   color: #777;
   vertical-align: middle;
+  font-size: 18px;
+  letter-spacing: -1px;
 }
 
 header adress:before {
   content: '';
-  display: inline-block;
-  margin-top: -1px;
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: -24px;
+  width: 21px;
+  height: 21px;
   vertical-align: middle;
-  background: #175272 url('../img/sprites.png') -78px 0px no-repeat;
+  background: #175272 url('../img/sprites.png') -77px 0px no-repeat;
   border-radius: 50%;
 }
 
 header form {
+  position: relative;
   display: inline-block;
-  margin: 0 15px;
+  margin: -5px 0px 0 9px;
+  padding: 1px 0px 0 25px;
   width: 496px;
-  height: 27px;
+  height: 25px;
   border-radius: 3px;
   background: linear-gradient(to top, #0d3458, #1f6787);
   box-shadow: 0px 3px 3px 0px rgba(150, 150, 150, 0.75);
   color: #fff;
   font-size: 12px;
+  vertical-align: middle;
 }
 
 header form:before {
   content: '';
-  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 1px;
   width: 20px;
   height: 20px;
   vertical-align: middle;
   background: #175272 url('../img/sprites.png') -50px 0px no-repeat;
 }
 
+header form input {
+  font-size: 12px;
+  height: 16px;
+}
+
 header form .text {
-  margin: 3px 0;
-  width: 112px;
-  padding-left: 5px;
+  margin: 3px 0px 0 1px;
+  width: 114px;
+  padding-left: 2px;
 }
 
 header form .login-button {
@@ -73,28 +93,35 @@ header form a {
   color:#bfbfbf;
 }
 
-header nav {
+header .navig-wrap {
   display: inline-block;
-  vertical-align: middle;
 }
 
 header .navig {
-  width: 80px;
-  height: 25px;
+  margin: 2px 0 0 11px;
+  width: 77px;
+  height: 22px;
   list-style: none;
   border: 1px solid rgb(189, 196, 199);
-  border-radius: 30%;
+  border-radius: 30px;
   text-align: center;
 }
 
 header .navig li {
+  position: relative;
   display: inline-block;
-  padding: 0 2px;
+  width: 16px;
+}
+
+header .navig img {
+  position: absolute;
+  top: -15px;
+  left: 0;
 }
 
 header .banner img {
+  margin-top: 5px;
   display: block;
-  margin: 5px 0;
 }
 
 .global-menu-wrap {
@@ -126,10 +153,180 @@ header .banner img {
   font-size: 14px;
 }
 
-main form {
+main {
+  position: relative;
+  margin: 160px 0;
+}
+
+main aside .title {
+  position: relative;
+  font-size: 14px;
+}
+
+main aside .title:before,
+main aside .title + ul > li span:before {
+  content: '';
   display: inline-block;
-  margin: 20px 0;
-  width: 200px;
-  height: 135px;
-  background: #999;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background: #124367 url(../img/sprites.png) no-repeat -173px 2px;
+  //border: 1px solid #999;
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+main aside .title:before {
+  background-position: -152px 2px;
+}
+
+main aside .title:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -4px;
+  padding: 2px 0 0 3px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 15px;
+}
+
+.title-of-catalog:after {
+  width: 210px;
+}
+
+.title-of-brands:after {
+  width: 150px;
+}
+
+main aside ul {
+  margin-top: 40px;
+  list-style: none;
+}
+
+main aside .title + ul > li {
+  position: relative;
+  font-size: 15px;
+}
+
+main aside .title + ul > li span {
+  position: absolute;
+  top: -30px;
+  padding: 2px 0 0 3px;
+  height: 22px;
+  width: 120px;
+  border: 1px solid;
+  border-radius: 15px;
+}
+
+.wrap-catalog {
+  float: left;
+  width: 24%;
+  border: 1px solid;
+}
+
+.catalog ul > li {
+  display: block;
+  min-height: 25px;
+  margin-left: 30px;
+  list-style-type: disc;
+}
+
+.catalog ul > li a {
+  margin: 5px;
+  text-decoration: none;
+  color: #465961;
+}
+
+.catalog ul > li a:hover {
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 14px;
+  color: #0c3256;
+}
+
+.content {
+  float: left;
+  margin-bottom: 50px;
+  width: 60%;
+  background: linear-gradient(to top, #93a7b0, #e4e7e8);
+}
+
+.content figure {
+  display: inline-block;
+  margin: 10px 15px;
+  text-align: center;
+}
+
+.content figcaption span {
+  display: block;
+}
+
+.content .company {
+  color: #2e6f8c;
+  font-size: 18px;
+}
+
+.content figure img {
+  display: block;
+  border: 1px solid #999;
+  border-radius: 10px;
+}
+
+.content .price {
+  color: #114165;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.content .price span {
+  font-style: italic;
+}
+
+.wrap-brands {
+  float: right;
+  width: 15%;
+  border: 1px solid;
+}
+
+.wrap-brands input {
+  display: inline-block;
+}
+
+main .brand-logos {
+  text-align: center;
+}
+
+footer {
+  height: 100px;
+  background: #213a4d;
+  text-align: center;
+}
+
+footer ul {
+  padding-top: 20px;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 14px;
+  text-align: center;
+  vertical-align: top;
+  color: white;
+}
+
+footer li:not(.none) {
+  border-left: 1px solid;
+}
+
+footer li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer p {
+  color: #7f4740;
 }
